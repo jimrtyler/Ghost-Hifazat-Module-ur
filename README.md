@@ -69,7 +69,9 @@ Ghost **16 Windows سخت بنانے کے فنکشنز** اور **Azure سیکی
 ### سیکیورٹی تشخیص
 ```powershell
 # Ghost ماڈیول لوڈ کریں
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 
 # موجودہ سیکیورٹی کی صورتحال چیک کریں
 Get-Ghost
@@ -97,7 +99,9 @@ Set-Ghost -SMBv1 -RDP -USBStorage -Intune
 
 ### آپشن 1: براہ راست ڈاؤن لوڈ (ٹیسٹنگ)
 ```powershell
-IEX(Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1')
+Invoke-WebRequest 'https://raw.githubusercontent.com/jimrtyler/Ghost/main/Ghost.ps1' -OutFile .\Ghost.ps1
+Get-Content .\Ghost.ps1
+. .\Ghost.ps1
 ```
 
 ### آپشن 2: ماڈیول انسٹالیشن
